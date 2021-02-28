@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="This is a portfolio for Christopher Cameron who is a web developer in Wellington, New Zealand" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+  <title>Portfolio Page For Chris Cameron In Wellington New Zealand</title>
+
+  <!-- Required Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css" integrity="" crossorigin="anonymous">
+
+
+  <!-- Load polyfills to support older browsers -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver"></script>
+
+  <!-- Required scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <style>
+    body {
+      background-image: linear-gradient(to top right, rgba(199, 198, 255, 0), rgb(201, 214, 243));
+      background-color: #007bff;
+    }
+
+    .carousel {
+      background-image: linear-gradient(to top right, rgba(199, 198, 255, 0), rgb(201, 214, 243));
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(2.5px);
+      -webkit-backdrop-filter: blur(2.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .avatar {
+      vertical-align: middle;
+      border-radius: 50%;
+      height: 230px;
+      width: 230px;
+    }
+
+    #socials {
+      font-size: 50px;
+    }
+
+
+
+
+
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+      body {
+        background-image: linear-gradient(to top right, rgba(199, 198, 255, 0), rgb(201, 214, 243));
+      }
+
+
+      .card-img-top {
+        height: 220px;
+        width: 220px;
+        margin: auto;
+
+      }
+
+
+
+    }
+
+    @media only screen and (max-width: 768px) {
+      .hideme {
+        opacity: 0;
+      }
+
+      .navbar-fixed-top.scrolled {
+        background-color: rgb(109, 156, 226) !important;
+        transition: background-color 200ms linear;
+      }
+
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20vh);
+        visibility: hidden;
+        transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+        will-change: opacity, visibility;
+      }
+
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+      }
+
+
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {}
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        body {
+          overflow: hidden;
+        }
+
+
+        .container {
+          height: 70vh;
+          position: relative;
+
+        }
+
+        .vertical-center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+
+        }
+
+        .avatar {
+          width: 250px;
+          height: 250px;
+          border-radius: 50%;
+          position: absolute;
+          top: 10%;
+          left: 10%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+
+        #socials {
+          font-size: 10px;
+        }
+
+        .card {
+          min-width: 100%;
+
+        }
+
+        i {
+          font-size: 30px;
+
+        }
+
+        .carousel-control-next,
+        .carousel-control-prev {
+          position: relative;
+          top: 0;
+          bottom: 0;
+          z-index: 0;
+          display: -ms-bloc;
+          display: block;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          width: 100%;
+          color: #fff;
+          text-align: center;
+          opacity: 10;
+          transition: opacity .15s ease;
+        }
+
+        .parent {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+        }
+
+        .images_sphere1__jGw5P {
+          height: 104px;
+          width: 104px;
+          z-index: 2;
+          top: 532px;
+          left: -21px;
+        }
+
+        .images_sphere2__2xvO3 {
+          height: 104px;
+          width: 104px;
+          z-index: 2;
+          top: 770px;
+          left: 20px;
+        }
+
+        .images_sphere3 {
+          height: 104px;
+          width: 104px;
+          z-index: 2;
+          top: 670px;
+          left: 100px;
+          position: absolute;
+        }
+
+        .images_sphere4 {
+          height: 104px;
+          width: 104px;
+          z-index: 2;
+          top: 746px;
+          left: 211px;
+          position: absolute;
+        }
+
+        .images_sphere5 {
+          height: 104px;
+          width: 104px;
+          z-index: 2;
+          top: 452px;
+          left: 264px;
+          position: absolute;
+        }
+
+        .images_sphere6 {
+          height: 104px;
+          width: 104px;
+          z-index: 2;
+          top: 620px;
+          left: 390px;
+          position: absolute;
+        }
+
+        .images_sphere7 {
+          height: 104px;
+          width: 104px;
+          z-index: 2;
+          top: 770px;
+          left: 375px;
+          position: absolute;
+        }
+
+        .images_sphere8 {
+          height: 104px;
+          width: 104px;
+          z-index: 2;
+          top: 370px;
+          left: 20px;
+          position: absolute;
+        }
+
+        .images_sphere9 {
+          height: 104px;
+          width: 104px;
+          z-index: 2;
+          top: 230px;
+          left: 200px;
+          position: absolute;
+        }
+
+        .images_sphere10 {
+          height: 104px;
+          width: 104px;
+          z-index: 0;
+          top: 520px;
+          left: 640px;
+          position: absolute;
+        }
+
+        .images_sphere11 {
+          height: 104px;
+          width: 104px;
+          z-index: 0;
+          top: 80px;
+          left: 340px;
+          position: absolute;
+        }
+
+        .images_sphere12 {
+          height: 104px;
+          width: 104px;
+          z-index: 0;
+          top: 400px;
+          left: 840px;
+          position: absolute;
+        }
+
+        .images_sphere13 {
+          height: 104px;
+          width: 104px;
+          z-index: 0;
+          top: 110px;
+          left: 1040px;
+          position: absolute;
+        }
+
+        .gallery {
+          margin-top: 40px;
+        }
+
+        .sub_div {
+          position: absolute;
+
+        }
+
+        .gallery img {
+          height: 150px;
+          width: 150px;
+          margin: auto;
+
+          animation: fadein 3s;
+          -moz-animation: fadein 3s;
+          /* Firefox */
+          -webkit-animation: fadein 3s;
+          /* Safari and Chrome */
+          -o-animation: fadein 3s;
+          /* Opera */
+
+        }
+
+        .quote-text {
+          font-size: clamp(1.2rem, 1.8vw, 3rem);
+        }
+
+        .testimonial {
+          margin-top: 40px;
+        }
+
+        .images_sphere1__jGw5P,
+        .images_sphere2__2xvO3,
+        .images_sphere3__2aDXm,
+        .images_sphere4__4T3uS,
+        .images_sphereBase__1mEc- {
+          position: absolute;
+        }
+
+
+        .gelatine {
+          animation: geletine 1s ease;
+          animation-delay: .5s;
+        }
+
+        @keyframes geletine {
+          30% {
+            transform: scale(1);
+          }
+
+          40%,
+          60% {
+            transform: rotate(-20deg) scale(1.1111);
+          }
+
+          50% {
+            transform: rotate(20deg) scale(1.2222);
+          }
+
+          70% {
+            transform: rotate(0deg) scale(1.1111);
+          }
+
+          100% {
+            transform: scale(1);
+          }
+        }
+
+        .quote-bottom {
+          font-size: clamp(.9rem, 1.2vw, 1.4rem);
+        }
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {}
+  </style>
+
+</head>
+
+<body class="text-white">
+  <div id="app">
+    <!--Mobile up to large-->
+    <div class="d-lg-none">
+      <nav style="min-height: 5vh;" class="navbar navbar-light navbar-fixed-top  sticky-top  navbar-expand-lg  mb-4">
+        <a class="btn btn-outline-warning rounded" href="https://chris-cameron-portfolio.firebaseapp.com/">Old Site</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+
+            <ul class="nav mt-3">
+              <li class="nav-item">
+                <a class="nav-link text-white p-2" href="#about">
+                  About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white p-2" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white p-2" href="#test">Testimonials</a></li>
+
+            </ul>
+
+
+          </div>
+        </div>
+      </nav>
+
+      <div class="row d-none">
+
+        <img src="shape2.png" class="images_sphere1__jGw5P" alt="">
+        <img src="shape2.png" class=" images_sphere2__2xvO3" alt="">
+        <img src="shape2.png" class=" images_sphere3" alt="">
+        <img src="shape2.png" class=" images_sphere4" alt="">
+        <img src="shape2.png" class=" images_sphere5" alt="">
+        <img src="shape2.png" class=" images_sphere6" alt="">
+        <img src="shape2.png" class=" images_sphere7" alt="">-->
+        <img src="shape2.png" class=" images_sphere8" alt="">
+        <img src="shape2.png" class=" images_sphere9" alt="">
+        <img src="shape2.png" class=" images_sphere10" alt="">
+        <img src="shape2.png" class=" images_sphere11" alt="">
+      </div>
+      <div id="about" class=" row mx-0">
+        <div class="col-sm-12">
+          <div class="card mb-3 vertical-center">
+
+            <div class="row mx-0">
+              <div class="col-md-12">
+                <div class="card-body p-0 pt-3">
+                  <div class="text-center">
+                    <img src="img_avatar.png" class="card-img avatar" alt="...">
+
+                  </div>
+                  <div class="text-center">
+                    <h1 class="card-title display-4 display-lg-1 ">Chris Cameron</h1>
+                    <h3>Web Developer</h3>
+                    <div id="socials" class="sub-div">
+                      <a href="https://www.linkedin.com/in/chris-cameron-47bba7101/" rel="nofollow">
+                        <i class="fab fa-linkedin p-2 text-muted"></i>
+                      </a>
+                      <a href="https://github.com/ChrisCameron12" rel="nofollow">
+                        <i class="fab fa-github-square p-2 text-muted"></i>
+                      </a>
+
+
+                    </div>
+                  </div>
+                  <div class="p-1 mb-3">
+                    <p class="card-text">Zombie ipsum reversuorpora ead survivor dictalking monstra adventus resi
+                      dentevil vultus comedat cerebella viventium. Qui animatelem incessu zomby. The voodoo
+                      sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum o</p>
+
+                  </div>
+
+                  <div class="p-1 text-center d-flex flex-column">
+                    <a href="chriscameron2021.pdf" download class="btn btn-warning  mb-3 " rel="nofollow">Download CV</a>
+                    <a href="mailto:abc@abc.com" download class="btn btn-warning" rel="nofollow">Email Me:</a>
+                  </div>
+
+
+                  <div class="row my-2 ml-1">
+                    <div class="card-text"><small class="text-muted">Last updated {{updated}}</small></div>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="px-3 mt-2 mb-3">
+        <h3 class="hideme">I have loads of experiance in...</h3>
+      </div>
+      <div data-spy="scroll" data-target="#navbar-example2" class="row row-cols-1 row-cols-md-3 mx-0 ">
+
+        <div class="col mb-4">
+
+
+          <div class="card gelatine hideme">
+
+            <img src="html5.png" class="card-img-top" alt="...">
+
+            <div class="card-body">
+              <h5 class="card-title">HTML</h5>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card gelatine hideme">
+            <img src="css2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CSS</h5>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card gelatine hideme">
+            <img src="javascript3.png" class="card-img-top circle " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Javascript</h5>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card gelatine hideme">
+            <img src="vue.png" class="card-img-top circle " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">VueJS</h5>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card gelatine hideme">
+            <img src="firebase.png" class="card-img-top circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Firebase</h5>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4 ">
+          <div class="card gelatine hideme">
+            <img src="node.png" class="card-img-top circle" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">RESTAPIs</h5>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card gelatine hideme">
+            <img src="mongodb.png" class="card-img-top circle " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">RESTAPIs</h5>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--showcase-->
+      <div data-spy="scroll" data-target="#navbar-example2" class="row mx-0">
+        <div class="col-sm-12">
+          <div id="test" class="p-2">
+            <h3 class="hideme">I have a good rep too...</h3>
+          </div>
+          <div class="card hideme mb-3">
+
+            <div class="card-body text-white ">
+
+              <blockquote class="">
+
+                <div class="py-1 quote-text">
+                  <i class="fas fa-quote-left m-2"></i>
+                  Chris has worked both as a casual UAT tester and as a UX designer on our web application. He did a
+                  thorough job in the UAT testing – identifying bugs and enhancement opportunities, and recorded them
+                  well.
+                  Some of his UX designs were also used to enhance our web app. Chris is easy to get along with and is a
+                  team player who takes pride in his work. It was a pleasure to work with Chris and I would highly
+                  recommend
+                  him. <i class="m-2 fas fa-quote-right"></i>
+                </div>
+
+              </blockquote>
+              <div class="quote-bottom">
+                <div>Product Manager</div>
+
+                <div>Wellington, New Zealand</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <!--Large and up-->
+    <div class="row d-none d-lg-block">
+      <div class="col-12">
+        <nav style="min-height: 5vh;" class="navbar navbar-expand-lg  mb-4">
+          <a class="btn btn-outline-warning rounded mt-3" href="https://chris-cameron-portfolio.firebaseapp.com/" rel="nofollow">Old
+            Site</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+
+              <ul class="nav mt-3">
+                <li data-target="#carouselExampleControls" data-slide-to="0" class="active nav-item">
+
+                  <a class="nav-link text-white p-3" rel="nofollow">
+                    About
+                  </a>
+                </li>
+                <li data-target="#carouselExampleControls" data-slide-to="1" class="nav-item">
+                  <a class="nav-link text-white p-3" rel="nofollow">Skills</a>
+                </li>
+                <li data-target="#carouselExampleControls" data-slide-to="2" class="nav-item">
+                  <a class="nav-link text-white p-3" rel="nofollow">Testimonials</a></li>
+
+              </ul>
+
+
+            </div>
+          </div>
+        </nav>
+
+
+
+
+
+
+
+        <div id="carouselExampleControls" class="carousel slide bg-primary " data-touch="false" data-interval="false">
+
+          <div class="carousel-inner">
+            <div style="min-height: 90vh; max-height:90vh" class="carousel-item active">
+              <img src="shape2.png" class="images_sphere1__jGw5P" alt="">
+              <img src="shape2.png" class=" images_sphere2__2xvO3" alt="">
+              <img src="shape2.png" class=" images_sphere3" alt="">
+              <img src="shape2.png" class=" images_sphere4" alt="">
+              <img src="shape2.png" class=" images_sphere5" alt="">
+              <img src="shape2.png" class=" images_sphere6" alt="">
+              <img src="shape2.png" class=" images_sphere7" alt="">
+              <img src="shape2.png" class=" images_sphere8" alt="">
+              <img src="shape2.png" class=" images_sphere9" alt="">
+              <img src="shape2.png" class=" images_sphere10" alt="">
+              <img src="shape2.png" class=" images_sphere11" alt="">
+              <img src="shape2.png" class=" images_sphere12" alt="">
+              <img src="shape2.png" class=" images_sphere13" alt="">
+
+              <div class="container">
+
+
+                <div class="row">
+
+                  <div class="card mb-3 vertical-center">
+
+                    <div class="row no-gutters">
+                      <div class="col-md-10">
+                        <div class="card-body pb-0">
+                          <h1 class="card-title display-1 ">Chris Cameron</h1>
+                          <h3>Web Developer</h3>
+                          <p class="card-text">I see you have found my website! Thanks for dropping by and feel free to
+                            get in touch!</p>
+
+                          <div>
+                            <a href="/chriscameron2021.pdf" download class="btn btn-warning">Download CV</a>
+                            <a href="mailto:abc@abc.com" class="btn btn-warning">Email Me:</a>
+                          </div>
+
+
+                          <div class="row my-2 ml-1">
+                            <div class="card-text"><small class="text-muted">Last updated {{updated}}</small></div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col-md-2">
+                        <div style="height: 88%;">
+                          <img src="img_avatar.png" class="card-img avatar" alt="..."></div>
+
+                        <div id="socials" class=" text-right sub-div">
+                          <a href="#linkedin">
+                            <i class="fab fa-linkedin p-2 text-muted"></i>
+                          </a>
+                          <a href="#github">
+                            <i class="fab fa-github-square p-2 text-muted"></i>
+                          </a>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <!--Skills-->
+            <div style="min-height: 90vh; max-height:90vh" class="carousel-item">
+              <div class="container">
+                <div class="gallery row row-cols-1 row-cols-md-3">
+                  <div class="col mb-4">
+                    <div class="card h-100 gelatine">
+
+                      <img src="html5.png" class="card-img-top" alt="...">
+
+                      <div class="card-body">
+                        <h5 class="card-title">HTML</h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card gelatine h-100">
+                      <img src="css2.png" class="card-img-top circle" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">CSS</h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card gelatine h-100">
+                      <img src="javascript3.png" class="card-img-top circle " alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Javascript</h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card gelatine h-100">
+                      <img src="vue.png" class="card-img-top circle " alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">VueJS</h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card gelatine h-100">
+                      <img src="firebase.png" class="card-img-top circle" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Firebase</h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card gelatine h-100">
+                      <img src="node.png" class="card-img-top circle" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">RESTAPIs</h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col mb-4">
+                    <div class="card gelatine h-100">
+                      <img src="mongodb.png" class="card-img-top circle " alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">RESTAPIs</h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+
+            </div>
+            <!--showcase-->
+            <div style="min-height: 90vh; max-height:90vh" class="carousel-item testimonial">
+              <div class="container">
+                <div class="card">
+
+                  <div class="card-body text-white">
+
+                    <blockquote class="">
+                      <i class="fas fa-quote-left mx-1"></i>
+                      <div class="pl-5 py-1 quote-text">
+                        Chris has worked both as a casual UAT tester and as a UX designer on our web application. He did
+                        a
+                        thorough job in the UAT testing – identifying bugs and enhancement opportunities, and recorded
+                        them well.
+                        Some of his UX designs were also used to enhance our web app. Chris is easy to get along with
+                        and is a
+                        team player who takes pride in his work. It was a pleasure to work with Chris and I would highly
+                        recommend
+                        him. <span class="ml-3"><i class="fas fa-quote-right"></i></span>
+                      </div>
+
+                    </blockquote>
+                    <div class="quote-bottom">
+                      <div>Product Manager</div>
+
+                      <div>Wellington, New Zealand</div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+  <!-- Start running your app -->
+  <script>
+    window.app = new Vue({
+      el: '#app',
+      data: {
+        name: "Chris Cameron",
+        updated: "2 days ago",
+
+        page: 1,
+
+      },
+      computed: {
+
+      },
+      methods: {
+
+      },
+
+      mounted: function () {
+
+        that = this
+
+        $('#carouselExampleControls').bind('mousewheel', function (e) {
+
+          if (e.originalEvent.wheelDelta / 220 > 0) {
+            console.log("scrolling right");
+            console.log(e.originalEvent.wheelDelta);
+            $(this).carousel('next');
+
+            that.$nextTick(() => {
+
+              that.setPagePlus();
+
+
+            });
+
+          } else {
+            console.log("scrolling left");
+            $(this).carousel('prev');
+            that.$nextTick(() => {
+
+              that.setPageMinus();
+
+
+            });
+          }
+
+        });
+
+
+
+      },
+    })
+  </script>
+
+  <script>
+    //fadein animation//
+    $(document).ready(function () {
+
+      $(window).scroll(function () {
+
+        /* Check the location of each desired element */
+        $('.hideme').each(function (i) {
+          //debugger;
+          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+          /* If the object is completely visible in the window, fade it it */
+          if (bottom_of_window > bottom_of_object) {
+
+            $(this).animate({
+              opacity: "1"
+            });
+
+          }
+        });
+
+        $(function () {
+          // debugger;
+          $(document).scroll(function () {
+            var $nav = $(".navbar-fixed-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+          });
+        });
+      });
+
+    });
+  </script>
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCLvST6IX8G0CyhT2ipnWyN7kYiNwLwkX0",
+    authDomain: "chrissy-47546.firebaseapp.com",
+    projectId: "chrissy-47546",
+    storageBucket: "chrissy-47546.appspot.com",
+    messagingSenderId: "801860637755",
+    appId: "1:801860637755:web:7ccd33982ddcbe2ffcb81e"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+  
+</body>
+
+</html>
